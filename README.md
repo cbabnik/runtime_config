@@ -9,6 +9,7 @@ Also plugins & extensions.
 * ~/.screenrc
 * ~/.bashrc
 * ~/.gitconfig
+* ~/.gitignore
 
 #### My system (also contains modified user configs)
 * /etc/vimrc

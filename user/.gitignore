@@ -1,0 +1,17 @@
+# Temp files
+#___________
+
+*.swp
+*.swo
+
+# Compiled Source
+#________________
+
+*.o
+*.exe
+*.class
+
+# Log files
+#__________
+
+*.log
