@@ -1,0 +1,16 @@
+[github]
+	user = cbabnik
+	#token =
+[user]
+	name = Curtis Babnik
+	email = curtisbabnik@gmail.com
+[color]
+	ui = true
+[pull]
+	rebase = true
+[credential]
+	helper = cache --timeout=3600
+[alias]
+	amend = commit -a --amend
+	lg = log --oneline --decorate --graph --all
+	s = status -s

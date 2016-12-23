@@ -1,0 +1,13 @@
+[color]
+	ui = auto
+[core] 
+	autocrlf = input
+        editor = vim
+	excludesfile = ~/.gitignore
+[push]
+	default = simple
+[alias]
+	co = checkout
+	br = branch
+	s = status
+	c = commit
