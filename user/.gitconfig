@@ -10,7 +10,7 @@
 	rebase = true
 [credential]
 	helper = cache --timeout=3600
-[core] 
+[core]
 	autocrlf = input
         editor = vim
 	excludesfile = ~/.gitignore

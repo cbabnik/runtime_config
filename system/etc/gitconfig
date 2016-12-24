@@ -1,6 +1,6 @@
 [color]
 	ui = auto
-[core] 
+[core]
 	autocrlf = input
         editor = vim
 	excludesfile = ~/.gitignore
