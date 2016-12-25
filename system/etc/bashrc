@@ -1,0 +1,17 @@
+# /etc/bashrc
+
+# These settings will not be automatically applied for users.
+# Use the following in your .bashrc file (in your home directory) to include.
+#
+# if [ -f /etc/bashrc ]; then
+# 	. /etc/bashrc
+# fi
+
+# generate completions for sudo and man-pages
+complete -cf sudo man
+shopt -s cdspell  # enable cd typo correction
+shopt -s dirspell # enable tab completion correction
+
+# add a bit of color to some basic commands
+alias ls='ls --color -h'
+alias grep='grep --color'
