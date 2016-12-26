@@ -1,0 +1,278 @@
+# /.screenrc
+# configuration for gnu screen
+
+# large scrollback buffer
+defscrollback 20000 # default 100
+# disable screens annoying statup greeting
+startup_message off
+# makes the borders less in my face
+sorendition "=d bg"
+# customize the status line
+hardstatus alwayslastline "%{b kw}%H %{r}%1` %{w}| %{g}%c %{w}| %{y}%d.%m.%Y %{w}| %{g}%l %{w}| %{-b kw}%u %-Lw%{= rW}%50> %n%f %t %{-}%+Lw%<"
+# prevents screen content clobbering (sometimes)
+altscreen on
+
+# key bindings
+#    navigation
+bind j focus down
+bind k focus up
+bind l focus right
+bind h focus left
+bind t focus top
+bind b focus bottom
+#    layouts
+bind -k k1 layout select 1 # F1
+bind -k k2 layout select 2 # F2
+bind -k k3 layout select 3 # F3
+bind -k k4 layout select 4 # F4
+bind -k k5 layout select 5 # F5
+bind -k k6 layout select 6 # F6
+bind -k k7 layout select 0 # F7
+bind -k k8 layout select 7 # F8
+#    resizing
+bind -k kr resize -h +10   # right arrow
+bind -k kl resize -h -10   # left  arrow
+bind -k ku resize -v +4    # up    arrow
+bind -k kd resize -v -4    # down  arrow
+
+# environment variables
+setenv EDITOR vim
+setenv VISUAL vim
+term xterm-256color
+
+# set up layouts
+# :fold:: init setup
+screen -t main 0
+screen -t tallterm 1
+screen -t termB 2
+screen -t termC 3
+screen -t altA 4
+screen -t altB 5
+# :foldend::
+# :fold:: Layout 0 - Laptop A
+layout new 0#:layout0:laptop:smallscreen
+#====================================
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#|       1        |        0        |
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#====================================
+#|                                  |
+#|                2                 |
+#|                                  |
+#====================================
+layout select 0
+split
+split -v
+select 1
+focus right
+select 0
+focus bottom
+resize 13 # 12 inner size
+select 2
+focus top
+# :foldend::
+# :fold:: Layout 0 - Laptop A
+layout new 1#:layout1:fullscreen:fs
+#====================================
+#|                                  |
+#|                                  |
+#|                                  |
+#|                                  |
+#|                                  |
+#|                _                 |
+#|               |?|                |
+#|                                  |
+#|                                  |
+#|                                  |
+#|                                  |
+#|                                  |
+#|                                  |
+#====================================
+select 0
+# :foldend::
+# :fold:: Layout 0 - Laptop A
+layout new 2#:layout2:split:vsplit
+#====================================
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#|       1        |        0        |
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#====================================
+layout select 2
+split -v
+select 1
+focus right
+select 0
+focus top
+# :foldend::
+# :fold:: Layout 0 - Laptop A
+layout new 3#:layout3
+#====================================
+#|           |          |           |
+#|           |          |           |
+#|           |          |           |
+#|           |          |           |
+#|           |          |           |
+#|           |          |           |
+#|     1     |     0    |     4     |
+#|           |          |           |
+#|           |          |           |
+#|           |          |           |
+#|           |          |           |
+#|           |          |           |
+#|           |          |           |
+#====================================
+layout select 3
+split -v
+split -v
+select 1
+focus right
+select 0
+focus right
+select 4
+focus left
+# :foldend::
+# :fold:: Layout 0 - Laptop A
+layout new 4#:layout4:grid:grid4
+#====================================
+#|                |                 |
+#|                |                 |
+#|       1        |        0        |
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#====================================
+#|                |                 |
+#|                |                 |
+#|                |                 |
+#|       2        |        3        |
+#|                |                 |
+#|                |                 |
+#====================================
+layout select 4
+split -v
+split
+select 1
+focus down
+select 2
+focus right
+split
+select 0
+focus down
+select 3
+focus top
+# :foldend::
+# :fold:: Layout 0 - Laptop A
+layout new 5#:layout5:skew:skewed:def:default
+#====================================
+#|        |                         |
+#|        |                         |
+#|        |                         |
+#|        |                         |
+#|   1    |          0 VIM          |
+#|        |                         |
+#|        |                         |
+#|        |                         |
+#|        |                         |
+#====================================
+#                 |                 |
+#        2        |        3        |
+#                 |                 |
+#====================================
+layout select 5
+# bottom
+split
+focus down
+resize 16 # 15 inner size
+split -v
+select 2
+focus right
+select 3
+# left
+focus up
+split -v
+select 1
+resize -h 81 # 80 inner size
+# VIM
+focus right
+select 0
+focus top
+# :foldend::
+# :fold:: Layout 0 - Laptop A
+layout new 6#:layout6:grid6
+#====================================
+#|           |          |           |
+#|           |          |           |
+#|           |          |           |
+#|     1     |     0    |     4     |
+#|           |          |           |
+#|           |          |           |
+#====================================
+#|           |          |           |
+#|           |          |           |
+#|           |          |           |
+#|     2     |     3    |     5     |
+#|           |          |           |
+#|           |          |           |
+#====================================
+layout select 6
+split -v
+split -v
+split
+select 1
+focus down
+select 2
+focus right
+split
+select 0
+focus down
+select 3
+focus right
+split
+select 4
+focus down
+select 5
+focus top
+focus right
+# :foldend::
+# :fold:: Layout 0 - Laptop A
+layout new 7#:layout7:hsplit
+#====================================
+#|                                  |
+#|                                  |
+#|                                  |
+#|                                  |
+#|                0                 |
+#|                                  |
+#|                                  |
+#|                                  |
+#|                                  |
+#====================================
+#|                                  |
+#|                2                 |
+#|                                  |
+#====================================
+layout select 7
+split
+select 0
+focus bottom
+resize 13 # 12 inner size
+select 2
+focus top
+
+layout select 1 # set the default layout
