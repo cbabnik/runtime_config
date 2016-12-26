@@ -25,13 +25,15 @@ setenv EDITOR vim
 setenv VISUAL vim
 
 # set up layouts
+# :fold:: init setup
 screen -t main 0
 screen -t tallterm 1
 screen -t termB 2
 screen -t termC 3
 screen -t altA 4
 screen -t altB 5
-
+# :foldend::
+# :fold:: Layout 0 - Laptop A
 layout new 0#:layout0:laptop:smallscreen
 #====================================
 #|                |                 |
@@ -58,8 +60,8 @@ focus bottom
 resize 13 # 12 inner size
 select 2
 focus top
-
-
+# :foldend::
+# :fold:: Layout 0 - Laptop A
 layout new 1#:layout1:fullscreen:fs
 #====================================
 #|                                  |
@@ -77,8 +79,8 @@ layout new 1#:layout1:fullscreen:fs
 #|                                  |
 #====================================
 select 0
-
-
+# :foldend::
+# :fold:: Layout 0 - Laptop A
 layout new 2#:layout2:split:vsplit
 #====================================
 #|                |                 |
@@ -101,8 +103,8 @@ select 1
 focus right
 select 0
 focus top
-
-
+# :foldend::
+# :fold:: Layout 0 - Laptop A
 layout new 3#:layout3
 #====================================
 #|           |          |           |
@@ -128,8 +130,8 @@ select 0
 focus right
 select 4
 focus left
-
-
+# :foldend::
+# :fold:: Layout 0 - Laptop A
 layout new 4#:layout4:grid:grid4
 #====================================
 #|                |                 |
@@ -158,8 +160,8 @@ select 0
 focus down
 select 3
 focus top
-
-
+# :foldend::
+# :fold:: Layout 0 - Laptop A
 layout new 5#:layout5:skew:skewed:def:default
 #====================================
 #|        |                         |
@@ -194,8 +196,8 @@ resize -h 81 # 80 inner size
 focus right
 select 0
 focus top
-
-
+# :foldend::
+# :fold:: Layout 0 - Laptop A
 layout new 6#:layout6:grid6
 #====================================
 #|           |          |           |
@@ -231,8 +233,8 @@ focus down
 select 5
 focus top
 focus right
-
-
+# :foldend::
+# :fold:: Layout 0 - Laptop A
 layout new 7#:layout7:hsplit
 #====================================
 #|                                  |
@@ -256,3 +258,5 @@ focus bottom
 resize 13 # 12 inner size
 select 2
 focus top
+
+layout select 1 # set the default layout# set up layouts
