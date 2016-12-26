@@ -7,6 +7,8 @@ defscrollback 20000 # default 100
 startup_message off
 # makes the borders less in my face
 sorendition "=d bg"
+# customize the status line
+hardstatus alwayslastline "%{b kw}%H %{r}%1` %{w}| %{g}%c %{w}| %{y}%d.%m.%Y %{w}| %{g}%l %{w}| %{-b kw}%u %-Lw%{= rW}%50> %n%f %t %{-}%+Lw%<"
 # prevents screen content clobbering (sometimes)
 altscreen on
 
@@ -36,6 +38,7 @@ bind -k kd resize -v -4    # down  arrow
 # environment variables
 setenv EDITOR vim
 setenv VISUAL vim
+term xterm-256color
 
 # set up layouts
 # :fold:: init setup

@@ -5,6 +5,10 @@
 defscrollback 20000 # default 100
 # prevents screen content clobbering (sometimes)
 altscreen on
+# customize the status line
+hardstatus alwayslastline "%{b kw}%H %{r}%1` %{w}| %{g}%c %{w}| %{y}%d.%m.%Y %{w}| %{g}%l %{w}| %{-b kw}%u %-Lw%{= rW}%50> %n%f %t %{-}%+Lw%<"
+
+term xterm-256color
 
 # key bindings
 #    navigation
