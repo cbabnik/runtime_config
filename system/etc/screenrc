@@ -1,0 +1,16 @@
+# /screenrc
+# system configuration for gnu screen
+
+# large scrollback buffer
+defscrollback 20000 # default 100
+# prevents screen content clobbering (sometimes)
+altscreen on
+
+# key bindings
+#    navigation
+bind j focus down
+bind k focus up
+bind l focus right
+bind h focus left
+bind t focus top
+bind b focus bottom
