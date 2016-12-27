@@ -1,17 +1,30 @@
+# .gitignore (files that won't be included in git repos)
+
 # Temp files
 #___________
-
 *.swp
 *.swo
+*~
 
 # Compiled Source
 #________________
-
 *.o
+*.so
 *.exe
 *.class
 
+# Packages
+#_________
+*.jar
+*.rar
+*.tar
+*.zip
+
 # Log files
 #__________
-
 *.log
+
+# Database files
+# ______________
+*.sql
+*.sqlite
