@@ -1,13 +1,16 @@
+# /etc/gitconfig
+# system configuartion for git
+
 [color]
-	ui = auto
-[core] 
-	autocrlf = input
-        editor = vim
-	excludesfile = ~/.gitignore
+   ui = auto
+[core]
+   autocrlf = input
+   editor = vim
+   excludesfile = ~/.gitignore
 [push]
-	default = simple
+   default = current
 [alias]
-	co = checkout
-	br = branch
-	s = status
-	c = commit
+   co = checkout
+   ci = commit
+   br = branch
+   s = status
