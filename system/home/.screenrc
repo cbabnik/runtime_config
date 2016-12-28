@@ -3,6 +3,8 @@
 
 # makes the borders less in my face
 sorendition "=d bg"
+# disable screens annoying statup greeting
+startup_message off
 
 # key bindings
 #    layouts
@@ -61,7 +63,7 @@ resize 13 # 12 inner size
 select 2
 focus top
 # :foldend::
-# :fold:: Layout 0 - Laptop A
+# :fold:: Layout 1 - Fullscreen
 layout new 1#:layout1:fullscreen:fs
 #====================================
 #|                                  |
@@ -80,7 +82,7 @@ layout new 1#:layout1:fullscreen:fs
 #====================================
 select 0
 # :foldend::
-# :fold:: Layout 0 - Laptop A
+# :fold:: Layout 2 - Vertical Split
 layout new 2#:layout2:split:vsplit
 #====================================
 #|                |                 |
@@ -104,7 +106,7 @@ focus right
 select 0
 focus top
 # :foldend::
-# :fold:: Layout 0 - Laptop A
+# :fold:: Layout 3 - Three Column
 layout new 3#:layout3
 #====================================
 #|           |          |           |
@@ -131,7 +133,7 @@ focus right
 select 4
 focus left
 # :foldend::
-# :fold:: Layout 0 - Laptop A
+# :fold:: Layout 4 - 4 Grid
 layout new 4#:layout4:grid:grid4
 #====================================
 #|                |                 |
@@ -161,7 +163,7 @@ focus down
 select 3
 focus top
 # :foldend::
-# :fold:: Layout 0 - Laptop A
+# :fold:: Layout 5 - Skewed Grid
 layout new 5#:layout5:skew:skewed:def:default
 #====================================
 #|        |                         |
@@ -197,7 +199,7 @@ focus right
 select 0
 focus top
 # :foldend::
-# :fold:: Layout 0 - Laptop A
+# :fold:: Layout 6 - 6 Grid
 layout new 6#:layout6:grid6
 #====================================
 #|           |          |           |
@@ -234,7 +236,7 @@ select 5
 focus top
 focus right
 # :foldend::
-# :fold:: Layout 0 - Laptop A
+# :fold:: Layout 7 - Laptop B
 layout new 7#:layout7:hsplit
 #====================================
 #|                                  |
@@ -258,5 +260,5 @@ focus bottom
 resize 13 # 12 inner size
 select 2
 focus top
-
-layout select 1 # set the default layout# set up layouts
+# :foldend::
+layout select 1 # set the default layout#
