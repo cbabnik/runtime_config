@@ -64,9 +64,13 @@ function UpdateHighlighting()
    endif
 endfunction
 " Highlight groups
+"    important
 :highlight Attention     ctermbg=Magenta  ctermfg=Black
 :highlight ConventionErr ctermbg=Red      ctermfg=Black
+"    low-key
+:highlight Todo          ctermbg=Yellow   ctermfg=Black
 :highlight Discrepency   ctermbg=DarkGray
+"    notes
 :highlight NoteHlRed     ctermbg=DarkRed  ctermfg=White
 :highlight NoteHlBlue    ctermbg=DarkBlue ctermfg=White
 :highlight NoteHlCyan    ctermbg=Cyan     ctermfg=Black
@@ -76,23 +80,23 @@ function HlCustomRegex()
    call matchadd( 'ConventionErr', ' \%#\@!$'    )
    "    real tabs are gross
    call matchadd( 'Discrepency',   '\t'          )
-   "   highlights any text in column 86
+   "    highlights any text in column 86
    call matchadd( 'ConventionErr', '\%86v.'           )
-   "   my stub
+   "    my stub
    call matchadd( 'Attention',     'STUB'        )
-   "   other stubs 'STUB' Todo doesn't exist anymore
-   "call matchadd( 'Todo',          'TODO\c'      )
-   "call matchadd( 'Todo',          'FIXME\c'     )
-   "call matchadd( 'Todo',          'XXX'         )
+   "    other stubs 'STUB' Todo doesn't exist anymore
+   call matchadd( 'Todo',          'TODO\c'      )
+   call matchadd( 'Todo',          'FIXME\c'     )
+   call matchadd( 'Todo',          'XXX'         )
 endfunction
 function HlExtraRegex()
-   "   Two empty lines is usually unneccessary
+   "    Two empty lines is usually unneccessary
    call matchadd( 'Discrepency',   '\n\n\n'      )
-   "   highlights double spaces (except after periods)
+   "    highlights double spaces (except after periods)
    call matchadd( 'Discrepency',   '\.\@!\S  \s\@!'   )
-   "   highlights new lines at end of file
+   "    highlights new lines at end of file
    call matchadd( 'ConventionErr', '\n\%#\@!\%$'      )
-   "   highlights commas with no space after
+   "    highlights commas with no space after
    call matchadd( 'Discrepency',   ',\S'              )
 endfunction
 function HlNoteSyntax()
