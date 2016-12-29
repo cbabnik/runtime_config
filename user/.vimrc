@@ -144,3 +144,8 @@ iabbrev @@S Author:<cr>Curtis Babnik<cr>cbabnik@sfu.ca<cr>301235515
 iabbrev atleast at least
 iabbrev seperate separate
 iabbrev seperating separating
+iabbrev acknowledgement acknowledgment
+iabbrev occurance occurence
+iabbrev accomodate accommodate
+iabbrev accomodation accommodation
+iabbrev accomodating accommodating

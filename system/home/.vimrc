@@ -120,4 +120,9 @@ iabbrev @@S Author:<cr>Curtis Babnik<cr>cbabnik@sfu.ca<cr>301235515
 "    my common spelling mistakes
 iabbrev atleast at least
 iabbrev seperate separate
-i
+iabbrev seperating separating
+iabbrev acknowledgement acknowledgment
+iabbrev occurance occurence
+iabbrev accomodate accommodate
+iabbrev accomodation accommodation
+iabbrev accomodating accommodating
