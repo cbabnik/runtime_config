@@ -1,0 +1,33 @@
+" /etc/vimrc
+
+" This file is not included by default. Please prepend your .vimrc file with:
+" Include the system settings
+" :if filereadable( "/etc/vimrc" )
+"    source /etc/vimrc
+" :endif
+
+set nocompatible        " no vi compatibility
+filetype plugin indent on
+
+syntax on
+
+set autoindent
+set history=50
+set ruler
+set incsearch
+
+set bs=indent,eol,start " always allow backspacing
+set nojoinspaces        " never double space after periods
+
+" converts only lowercase searches to ignorecase
+set smartcase
+set ignorecase
+
+" better tabbing
+set shiftwidth=3
+set expandtab
+set smarttab
+
+" completing commands with tab
+set wildmode=longest,list,full
+set wildmenu
