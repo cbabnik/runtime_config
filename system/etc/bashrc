@@ -1,0 +1,26 @@
+# /etc/bashrc
+
+# These settings will not be automatically applied for users.
+# Use the following in your .bashrc file (in your home directory) to include.
+#
+# if [ -f /etc/bashrc ]; then
+#    . /etc/bashrc
+# fi
+
+# expand history sizes
+shopt -s histappend
+HISTSIZE=1000
+HISTFILESIZE=5000
+# change timestamp format
+export HISTTIMEFORMAT='%F %T '
+# run any other prompt command, then print command to an eternal history
+PROMPT_COMMAND='echo $$ $USER "$(history 1)" >> ~/.bash_eternal_history'
+
+# generate completions for sudo and man-pages
+complete -cf sudo man
+shopt -s cdspell  # enable cd typo correction
+shopt -s dirspell # enable tab completion correction
+
+# add a bit of color to some basic commands
+alias ls='ls --color -h'
+alias grep='grep --color'
