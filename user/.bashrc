@@ -18,6 +18,13 @@ export HISTTIMEFORMAT='%F %T '
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo $$ $USER \
                   "$(history 1)" >> ~/.bash_eternal_history'
 
+# use a trash folder
+export TRASH="$HOME/.Trash"
+function rmtrash() { mv $@ $TRASH/; }
+
+# combine cd and ls
+function cl() { cd $1; ls; }
+
 # generate completions for sudo and man-pages
 complete -cf sudo man
 shopt -s cdspell  # enable cd typo correction
