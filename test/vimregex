@@ -1,0 +1,25 @@
+trailing whitespace 
+   
+		real	tabs	
+Text and stuff in the column 86........40........50........60........70........80........90
+                             86........40........50........60........70........80          
+STUB stub stUb TODO todo toDo fixme fixMe FIXME XXX xxx xXx
+triple enter
+
+
+double spaces  <- right there ->  
+except after periods.  <-
+don't highlight followed by more whitespace   <-  	<-(followed by tab)
+commas with no space after , good ,bad good->,
+note highlighting RED :::
+RED :R::
+BLUE :B::
+CYAN :C::
+
+and folding is like this
+:fold:: Fold Title
+folded stuff
+:foldend::
+
+Empty line at end file
+
