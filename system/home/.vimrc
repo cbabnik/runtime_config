@@ -51,6 +51,8 @@ endfunction
 :highlight NoteHlRed     ctermbg=DarkRed  ctermfg=White
 :highlight NoteHlBlue    ctermbg=DarkBlue ctermfg=White
 :highlight NoteHlCyan    ctermbg=Cyan     ctermfg=Black
+"    used by vim
+:highlight CursorLine    ctermbg=DarkGray ctermfg=White cterm=NONE
 function HlCustomRegex()
    " My code preferences
    "    trailing whitespace
@@ -85,8 +87,8 @@ endfunction
 ":foldend::
 
 " My hotkeys :C::
-" F1 - toggle line numbers
-nnoremap <F1> :setlocal number!<cr>
+" F1 - toggle line numbers & cursor highlighting
+nnoremap <F1> :setlocal number!<cr> :setlocal cursorline!<cr>
 " F2 - toggle modifiability
 nnoremap <F2> :setlocal modifiable!<cr>
 " F3 - toggle defaultRegex
