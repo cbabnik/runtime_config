@@ -61,7 +61,7 @@ function HlCustomRegex()
    call matchadd( 'ConventionErr', '\%86v.'           )
    "    my stub
    call matchadd( 'Attention',     'STUB'        )
-   "   other stubs 'STUB' Todo doesn't exist anymore
+   "   other stubs
    call matchadd( 'Todo',          'TODO\c'      )
    call matchadd( 'Todo',          'FIXME\c'     )
    call matchadd( 'Todo',          'XXX'         )
@@ -82,22 +82,6 @@ function HlNoteSyntax()
    call matchadd( 'NoteHlBlue',    '^.\{-}:B::$' )
    call matchadd( 'NoteHlCyan',    '^.\{-}:C::$' )
 endfunction
-function ToggleDefaultHlRegex()
-   if g:default_hl_regex_enabled
-      let g:default_hl_regex_enabled = 0
-   else
-      let g:default_hl_regex_enabled = 1
-   endif
-   call UpdateHighlighting()
-endfunction
-function ToggleExtraHlRegex()
-   if g:default_hl_regex_enabled
-      let g:extra_hl_regex_enabled = 0
-   else
-      let g:extra_hl_regex_enabled = 1
-   endif
-   call UpdateHighlighting()
-endfunction
 ":foldend::
 
 " My hotkeys :C::
@@ -107,8 +91,18 @@ nnoremap <F1> :setlocal number!<cr>
 nnoremap <F2> :setlocal modifiable!<cr>
 " F3 - toggle defaultRegex
 nnoremap <F3> :call ToggleDefaultHlRegex()<cr>
+function ToggleExtraHlRegex()
+   let g:default_hl_regex_enabled = !g:default_hl_regex_enabled
+   echo "extra regex =" g:default_hl_regex_enabled
+   call UpdateHighlighting()
+endfunction
 " F4 - toggle extraRegex
 nnoremap <F4> :call ToggleExtraHlRegex()<cr>
+function ToggleExtraHlRegex()
+   let g:extra_hl_regex_enabled = !g:extra_hl_regex_enabled
+   echo "extra regex =" g:extra_hl_regex_enabled
+   call UpdateHighlighting()
+endfunction
 " F5 - toggle customRegex
 nnoremap <F5> :checktime<cr>
 " F6 - toggle pastemode
