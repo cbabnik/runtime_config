@@ -1,5 +1,10 @@
 " .vimrc
 
+" The next couple lines must precede some code, so keep them at the top here
+" Pathogen plugin helps manage other plugins
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 " Include the system settings
 :if filereadable( "/etc/vimrc" )
    source /etc/vimrc
