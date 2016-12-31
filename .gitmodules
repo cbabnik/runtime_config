@@ -1,0 +1,12 @@
+[submodule "plugins/.vim/bundle/vim-pathogen"]
+	path = plugins/.vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "plugins/.vim/bundle/vim-fugitive"]
+	path = plugins/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "plugins/.vim/bundle/nerdtree"]
+	path = plugins/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "plugins/.vim/bundle/vim-colors-solarized"]
+	path = plugins/.vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git

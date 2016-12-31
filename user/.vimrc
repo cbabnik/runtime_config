@@ -1,9 +1,26 @@
 " .vimrc
 
+" The next couple lines must precede some code, so keep them at the top here
+" Pathogen plugin helps manage other plugins
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 " Include the system settings
 :if filereadable( "/etc/vimrc" )
    source /etc/vimrc
 :endif
+
+" Plugin configuration setup
+"    NERDTree
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.git$', '\.*.swp', '\.*.swo', '\.*.swn']
+"       F8 - toggle NERDTree
+nnoremap <F8> :NERDTreeToggle<cr>
+"    vim colors solarized
+set background=dark
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+colorscheme solarized
 
 set nocompatible        " no vi compatibility
 filetype plugin indent on
