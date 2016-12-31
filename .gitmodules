@@ -7,3 +7,6 @@
 [submodule "plugins/.vim/bundle/nerdtree"]
 	path = plugins/.vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "plugins/.vim/bundle/vim-colors-solarized"]
+	path = plugins/.vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
