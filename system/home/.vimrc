@@ -10,6 +10,13 @@ execute pathogen#infect()
    source /etc/vimrc
 :endif
 
+" Plugin configuration setup
+"    NERDTree
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.git$', '\.*.swp', '\.*.swo', '\.*.swn']
+"       F8 - toggle NERDTree
+nnoremap <F8> :NERDTreeToggle<cr>
+
 " I prefer size 3 indentation
 set shiftwidth=3
 

@@ -4,3 +4,6 @@
 [submodule "plugins/.vim/bundle/vim-fugitive"]
 	path = plugins/.vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "plugins/.vim/bundle/nerdtree"]
+	path = plugins/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
