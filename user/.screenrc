@@ -273,4 +273,19 @@ resize 13 # 12 inner size
 select 2
 focus top
 # :foldend::
+# :fold:: clear all screens to top
+layout select 1
+select 1
+clear
+select 2
+clear
+select 3
+clear
+select 4
+clear
+select 5
+clear
+select 0
+clear
+# :foldend::
 layout select 1 # set the default layout
