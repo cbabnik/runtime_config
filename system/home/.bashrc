@@ -9,6 +9,12 @@ fi
 export TRASH="$HOME/.Trash"
 function rmtrash() { mv $@ $TRASH/; }
 
+# change timestamp format
+export HISTTIMEFORMAT='%F %T '
+# run any other prompt command, then print command to an eternal history
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo $$ $USER \
+                  "$(history 1)" >> ~/.bash_eternal_history'
+
 # combine cd and ls
 function cl() { cd $1; ls; }
 
