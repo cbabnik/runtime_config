@@ -2,7 +2,7 @@
 
 # Source system defintions
 if [ -f /etc/bashrc ]; then
-   . /etc/bashrc
+   source /etc/bashrc
 fi
 
 # use a trash folder
