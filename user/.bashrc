@@ -5,9 +5,6 @@ if [ -f /etc/bashrc ]; then
    . /etc/bashrc
 fi
 
-# enable bash vi-mode, use "bind -P" to see bindings
-set -o vi
-
 # expand history sizes
 shopt -s histappend
 HISTSIZE=1000
