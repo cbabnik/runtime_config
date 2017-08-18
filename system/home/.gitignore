@@ -20,11 +20,19 @@
 *.tar
 *.zip
 
-# Log files
-#__________
+# Log files & Debug info
+#_______________________
 *.log
+*.stackdump
 
 # Database files
 # ______________
 *.sql
 *.sqlite
+*.csv
+*.json
+
+# Session files
+# _____________
+.vimsession*
+vimsession*
