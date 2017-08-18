@@ -12,6 +12,9 @@ function rmtrash() { mv $@ $TRASH/; }
 # combine cd and ls
 function cl() { cd $1; ls; }
 
+# macro to remove vim swap files
+function remove_vim_swaps() { find ./ -type f -name "\.*sw[klmnop]" -delete; }
+
 alias rm='rm -Iv'
 alias mv='mv -iv'
 alias ll='ls -lG'

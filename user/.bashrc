@@ -22,6 +22,9 @@ function rmtrash() { mv $@ $TRASH/; }
 # combine cd and ls
 function cl() { cd $1; ls; }
 
+# macro to remove vim swap files
+function remove_vim_swaps() { find ./ -type f -name "\.*sw[klmnop]" -delete; }
+
 # generate completions for sudo and man-pages
 complete -cf sudo man
 shopt -s cdspell  # enable cd typo correction
