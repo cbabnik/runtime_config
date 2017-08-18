@@ -24,3 +24,6 @@ shopt -s dirspell # enable tab completion correction
 # add a bit of color to some basic commands
 alias ls='ls --color -h'
 alias grep='grep --color'
+
+# mkdir /a/b/c will create directories a and b if nonexistant
+alias mkdir='mkdir -pv'
