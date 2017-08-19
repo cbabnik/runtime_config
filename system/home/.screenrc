@@ -7,15 +7,8 @@ sorendition "=d bg"
 startup_message off
 
 # key bindings
-#    layouts
-bind -k k1 layout select 1 # F1
-bind -k k2 layout select 2 # F2
-bind -k k3 layout select 3 # F3
-bind -k k4 layout select 4 # F4
-bind -k k5 layout select 5 # F5
-bind -k k6 layout select 6 # F6
-bind -k k7 layout select 0 # F7
-bind -k k8 layout select 7 # F8
+#    switch layout
+bind _ layout select
 #    resizing
 bind -k kr resize -h +10   # right arrow
 bind -k kl resize -h -10   # left  arrow
