@@ -254,4 +254,4 @@ resize 13 # 12 inner size
 select 2
 focus top
 # :foldend::
-layout select 1 # set the default layout#
+layout select 5 # set the default layout#
