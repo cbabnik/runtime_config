@@ -1,6 +1,14 @@
 # /.screenrc
 # configuration for gnu screen
 
+# hardstatus
+hardstatus on
+hardstatus alwayslastline
+hardstatus string " %H [%S] %= %C%a %Y-%M-%d"
+# %H [%S]       - hostname [sessionname]
+# %=            - right align the rest
+# %C%a %Y-%M-%d - current time and date
+
 # large scrollback buffer
 defscrollback 20000 # default 100
 # disable screens annoying statup greeting

@@ -1,6 +1,12 @@
 # /.screenrc
 # configuration for gnu screen
 
+# hardstatus
+hardstatus string " %H [%S] %= %C%a %Y-%M-%d"
+# %H [%S]       - hostname [sessionname]
+# %=            - right align the rest
+# %C%a %Y-%M-%d - current time and date
+
 # makes the borders less in my face
 sorendition "=d bg"
 # disable screens annoying statup greeting
