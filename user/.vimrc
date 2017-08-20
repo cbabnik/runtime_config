@@ -33,18 +33,22 @@ set incsearch              " searches as you type
 set shiftwidth=3           " because God uses size 3 tabs
 set expandtab              " insert spaces instead of real tabs
 set smarttab               " smarter use of tab key (trust me)
-" quality of life things
-set autoindent             " when starting new line, copy indentation
-set history=50             " extend command history
-set ruler                  " shows line and character at bottom right
-set bs=indent,eol,start    " always allow backspacing
-set nojoinspaces           " never double space after periods
+" for my orientation
+set relativenumber         " gives relative line numbers on leftside
+set number                 " gives the current line number on leftside
 " command tab completion
 set wim=longest,list,full  " wildmode: says how tab completion works
 set wildmenu               " extends wildmode to be interactable
 " change vim fold settings
 set fmr=:fold::,:foldend:: " foldmarker: overwrites {{{ and }}}
 set foldmethod=marker      " several other methods exist
+" quality of life things
+set autoindent             " when starting new line, copy indentation
+set history=50             " extend command history
+set ruler                  " shows line and character at bottom right
+set bs=indent,eol,start    " always allow backspacing
+set nojoinspaces           " never double space after periods
+set lazyredraw             " don't redraw when it's not needed
 
 " Setup the environment a bit :C::
 " set modifiability based on 'read-only' ness

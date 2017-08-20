@@ -22,7 +22,11 @@ let g:solarized_termtrans=1
 colorscheme solarized
 
 " Misc settings :C::
+" for my orientation
+set relativenumber         " gives relative line numbers on leftside
+set number                 " gives the current line number on leftside
 " change vim fold settings
+set foldenable             " just in case someone turned it off
 set fmr=:fold::,:foldend:: " foldmarker: overwrites {{{ and }}}
 set foldmethod=marker      " several other methods exist
 " overwrite some sys defaults
