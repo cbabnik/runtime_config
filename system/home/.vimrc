@@ -1,5 +1,6 @@
 " .vimrc
 
+" Setup Plugins :C::
 " The next couple lines must precede some code, so keep them at the top here
 " Pathogen plugin helps manage other plugins
 runtime bundle/vim-pathogen/autoload/pathogen.vim
@@ -20,13 +21,14 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 colorscheme solarized
 
-" I prefer size 3 indentation
-set shiftwidth=3
+" Misc settings :C::
+" change vim fold settings
+set fmr=:fold::,:foldend:: " foldmarker: overwrites {{{ and }}}
+set foldmethod=marker      " several other methods exist
+" overwrite some sys defaults
+set shiftwidth=3           " because God uses size 3 tabs
 
-" overwrites the default vim foldmarkers {{{ , }}}
-set foldmarker=:fold::,:foldend::
-set foldmethod=marker
-
+" Setup the environment a bit :C::
 " set modifiability based on 'read-only' ness
 autocmd BufRead * call ProtectReadOnly()
 function! ProtectReadOnly()
@@ -127,7 +129,7 @@ nnoremap <F6> :setlocal paste!<cr>
 " F8 - toggle NERDTree
 nnoremap <F8> :NERDTreeToggle<cr>
 
-" alias some common words/phrases :C::
+" Alias some common words/phrases :C::
 "    contact
 iabbrev @@g curtisbabnik@gmail.com
 iabbrev @@s cbabnik@sfu.ca
