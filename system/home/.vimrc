@@ -14,8 +14,6 @@ execute pathogen#infect()
 "    NERDTree
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.git$', '\.*.swp', '\.*.swo', '\.*.swn']
-"       F8 - toggle NERDTree
-nnoremap <F8> :NERDTreeToggle<cr>
 "    vim colors solarized
 set background=dark
 let g:solarized_termcolors=256
@@ -126,6 +124,8 @@ endfunction
 nnoremap <F5> :checktime<cr>
 " F6 - toggle pastemode
 nnoremap <F6> :setlocal paste!<cr>
+" F8 - toggle NERDTree
+nnoremap <F8> :NERDTreeToggle<cr>
 
 " alias some common words/phrases :C::
 "    contact
