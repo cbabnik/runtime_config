@@ -63,17 +63,17 @@ function! UpdateHighlighting()
 endfunction
 " Highlight groups
 "    important
-:highlight Attention     ctermbg=Magenta  ctermfg=Black
-:highlight ConventionErr ctermbg=Red      ctermfg=Black
+highlight Attention     ctermbg=Magenta  ctermfg=Black
+highlight ConventionErr ctermbg=Red      ctermfg=Black
 "    low-key
-:highlight Todo          ctermbg=Yellow   ctermfg=Black
-:highlight Discrepency   ctermbg=DarkGray
+highlight Todo          ctermbg=Yellow   ctermfg=Black
+highlight Discrepency   ctermbg=DarkGray
 "    notes
-:highlight NoteHlRed     ctermbg=DarkRed  ctermfg=White
-:highlight NoteHlBlue    ctermbg=DarkBlue ctermfg=White
-:highlight NoteHlCyan    ctermbg=Cyan     ctermfg=Black
+highlight NoteHlRed     ctermbg=DarkRed  ctermfg=White
+highlight NoteHlBlue    ctermbg=DarkBlue ctermfg=White
+highlight NoteHlCyan    ctermbg=Cyan     ctermfg=Black
 "    used by vim
-:highlight CursorLine    ctermbg=DarkGray ctermfg=White cterm=NONE
+highlight CursorLine    ctermbg=DarkGray ctermfg=White cterm=NONE
 function! HlCustomRegex()
    " My code preferences
    "    trailing whitespace
