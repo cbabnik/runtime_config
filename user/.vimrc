@@ -132,29 +132,29 @@ endfunction
 
 " My hotkeys :C::
 " F1 - toggle line numbers & cursor highlighting
-nnoremap <F1> :setlocal number!<cr> :setlocal cursorline!<cr>
+nnoremap <silent> <F1> :setlocal number!<cr> :setlocal relativenumber!<cr>
 " F2 - toggle modifiability
-nnoremap <F2> :setlocal modifiable!<cr>
+nnoremap <silent> <F2> :setlocal modifiable!<cr> :echo "modifiable:" &modifiable<cr>
 " F3 - toggle defaultRegex
 nnoremap <F3> :call ToggleDefaultHlRegex()<cr>
 function! ToggleDefaultHlRegex()
    let g:default_hl_regex_enabled = !g:default_hl_regex_enabled
-   echo "extra regex =" g:default_hl_regex_enabled
+   echo "custom regex highlighting =" g:default_hl_regex_enabled
    call UpdateHighlighting()
 endfunction
 " F4 - toggle extraRegex
 nnoremap <F4> :call ToggleExtraHlRegex()<cr>
 function! ToggleExtraHlRegex()
    let g:extra_hl_regex_enabled = !g:extra_hl_regex_enabled
-   echo "extra regex =" g:extra_hl_regex_enabled
+   echo "extra regex highlighting =" g:extra_hl_regex_enabled
    call UpdateHighlighting()
 endfunction
 " F5 - toggle customRegex
-nnoremap <F5> :checktime<cr>
+nnoremap <silent> <F5> :checktime<cr> :echo "refreshed"<cr>
 " F6 - toggle pastemode
-nnoremap <F6> :setlocal paste!<cr>
+nnoremap <silent> <F6> :setlocal paste!<cr> :echo "paste mode:" &paste<cr>
 " F8 - toggle NERDTree
-nnoremap <F8> :NERDTreeToggle<cr>
+nnoremap <silent> <F8> :NERDTreeToggle<cr>
 
 " Alias some common words/phrases :C::
 "    contact
