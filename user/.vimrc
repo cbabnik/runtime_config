@@ -61,7 +61,12 @@ function! ProtectReadOnly()
    endif
 endfunction
 
-" Highlighting :fold::
+" Syntax Highlighting for strange filenames
+au BufRead,BufNewFile screenrc  set syntax=screen
+au BufRead,BufNewFile gitconfig set syntax=gitconfig
+au BufRead,BufNewFile *.g4      set syntax=antlr4
+
+" Regex Highlighting :fold::
 " Highlight custom regex
 autocmd BufRead,BufNewFile,WinEnter * call UpdateHighlighting()
 let g:note_hl_regex_enabled = 1

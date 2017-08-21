@@ -28,3 +28,9 @@ set lazyredraw             " don't redraw when it's not needed
 " command tab completion
 set wim=longest,list,full  " wildmode: says how tab completion works
 set wildmenu               " extends wildmode to be interactable
+
+" Syntax Highlighting for strange filenames
+au BufRead,BufNewFile screenrc  set syntax=screen
+au BufRead,BufNewFile gitconfig set syntax=gitconfig
+au BufRead,BufNewFile *.g4      set syntax=antlr4
+

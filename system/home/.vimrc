@@ -43,7 +43,7 @@ function! ProtectReadOnly()
    endif
 endfunction
 
-" Highlighting :fold::
+" Regex Highlighting :fold::
 " Highlight custom regex
 autocmd BufRead,BufNewFile,WinEnter * call UpdateHighlighting()
 let g:note_hl_regex_enabled = 1
