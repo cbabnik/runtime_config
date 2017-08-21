@@ -67,7 +67,7 @@ autocmd BufRead,BufNewFile,WinEnter * call UpdateHighlighting()
 let g:note_hl_regex_enabled = 1
 let g:default_hl_regex_enabled = 1
 let g:extra_hl_regex_enabled = 0
-function UpdateHighlighting()
+function! UpdateHighlighting()
    call clearmatches()
    if g:note_hl_regex_enabled
       call HlNoteSyntax()
@@ -92,7 +92,7 @@ endfunction
 :highlight NoteHlCyan    ctermbg=Cyan     ctermfg=Black
 "    used by vim
 :highlight CursorLine    ctermbg=DarkGray ctermfg=White cterm=NONE
-function HlCustomRegex()
+function! HlCustomRegex()
    " My code preferences
    "    trailing whitespace
    call matchadd( 'ConventionErr', ' \%#\@!$'    )
@@ -107,7 +107,7 @@ function HlCustomRegex()
    call matchadd( 'Todo',          'FIXME\c'     )
    call matchadd( 'Todo',          'XXX'         )
 endfunction
-function HlExtraRegex()
+function! HlExtraRegex()
    "    Two empty lines is usually unneccessary
    call matchadd( 'Discrepency',   '\n\n\n'      )
    "    highlights double spaces (except after periods)
@@ -117,7 +117,7 @@ function HlExtraRegex()
    "    highlights commas with no space after
    call matchadd( 'Discrepency',   ',\S'              )
 endfunction
-function HlNoteSyntax()
+function! HlNoteSyntax()
    call matchadd( 'NoteHlRed',     '^.\{-}:::$'  )
    call matchadd( 'NoteHlRed',     '^.\{-}:R::$' )
    call matchadd( 'NoteHlBlue',    '^.\{-}:B::$' )
@@ -132,14 +132,14 @@ nnoremap <F1> :setlocal number!<cr> :setlocal cursorline!<cr>
 nnoremap <F2> :setlocal modifiable!<cr>
 " F3 - toggle defaultRegex
 nnoremap <F3> :call ToggleDefaultHlRegex()<cr>
-function ToggleDefaultHlRegex()
+function! ToggleDefaultHlRegex()
    let g:default_hl_regex_enabled = !g:default_hl_regex_enabled
    echo "extra regex =" g:default_hl_regex_enabled
    call UpdateHighlighting()
 endfunction
 " F4 - toggle extraRegex
 nnoremap <F4> :call ToggleExtraHlRegex()<cr>
-function ToggleExtraHlRegex()
+function! ToggleExtraHlRegex()
    let g:extra_hl_regex_enabled = !g:extra_hl_regex_enabled
    echo "extra regex =" g:extra_hl_regex_enabled
    call UpdateHighlighting()
