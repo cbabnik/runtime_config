@@ -36,6 +36,7 @@ set smarttab               " smarter use of tab key (trust me)
 " for my orientation
 set relativenumber         " gives relative line numbers on leftside
 set number                 " gives the current line number on leftside
+set ruler                  " shows line and character at bottom right
 " command tab completion
 set wim=longest,list,full  " wildmode: says how tab completion works
 set wildmenu               " extends wildmode to be interactable
@@ -45,7 +46,6 @@ set foldmethod=marker      " several other methods exist
 " quality of life things
 set autoindent             " when starting new line, copy indentation
 set history=50             " extend command history
-set ruler                  " shows line and character at bottom right
 set bs=indent,eol,start    " always allow backspacing
 set nojoinspaces           " never double space after periods
 set lazyredraw             " don't redraw when it's not needed
