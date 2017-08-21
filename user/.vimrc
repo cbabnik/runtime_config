@@ -132,9 +132,9 @@ endfunction
 
 " My hotkeys :C::
 " F1 - toggle line numbers & cursor highlighting
-nnoremap <silent> <F1> :setlocal number!<cr> :setlocal relativenumber!<cr>
+nnoremap <silent> <F1> :setlocal number!<cr>:setlocal relativenumber!<cr>
 " F2 - toggle modifiability
-nnoremap <silent> <F2> :setlocal modifiable!<cr> :echo "modifiable:" &modifiable<cr>
+nnoremap <silent> <F2> :setlocal modifiable!<cr>:echo "modifiable:" &modifiable<cr>
 " F3 - toggle defaultRegex
 nnoremap <F3> :call ToggleDefaultHlRegex()<cr>
 function! ToggleDefaultHlRegex()
@@ -150,9 +150,9 @@ function! ToggleExtraHlRegex()
    call UpdateHighlighting()
 endfunction
 " F5 - toggle customRegex
-nnoremap <silent> <F5> :checktime<cr> :echo "refreshed"<cr>
+nnoremap <silent> <F5> :checktime<cr>:echo "refreshed"<cr>
 " F6 - toggle pastemode
-nnoremap <silent> <F6> :setlocal paste!<cr> :echo "paste mode:" &paste<cr>
+nnoremap <silent> <F6> :setlocal paste!<cr>:echo "paste mode:" &paste<cr>
 " F8 - toggle NERDTree
 nnoremap <silent> <F8> :NERDTreeToggle<cr>
 
