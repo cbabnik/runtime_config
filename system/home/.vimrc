@@ -45,7 +45,7 @@ endfunction
 
 " Regex Highlighting :fold::
 " Highlight custom regex
-autocmd BufRead,BufNewFile,WinEnter * call UpdateHighlighting()
+autocmd BufRead,BufNewFile * call UpdateHighlighting()
 let g:note_hl_regex_enabled = 1
 let g:default_hl_regex_enabled = 1
 let g:extra_hl_regex_enabled = 0
