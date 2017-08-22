@@ -2,11 +2,8 @@
 
 # Source system defintions
 if [ -f /etc/bashrc ]; then
-   . /etc/bashrc
+   source /etc/bashrc
 fi
-
-# enable bash vi-mode, use "bind -P" to see bindings
-set -o vi
 
 # expand history sizes
 shopt -s histappend
@@ -25,6 +22,9 @@ function rmtrash() { mv $@ $TRASH/; }
 # combine cd and ls
 function cl() { cd $1; ls; }
 
+# macro to remove vim swap files
+function remove_vim_swaps() { find ./ -type f -name "\.*sw[klmnop]" -delete; }
+
 # generate completions for sudo and man-pages
 complete -cf sudo man
 shopt -s cdspell  # enable cd typo correction
@@ -36,6 +36,8 @@ alias ls='ls --color -h'
 alias ll='ls -lG'
 alias la='ls -A'
 alias grep='grep --color'
+alias mkdir='mkdir -pv'
+alias svim='sudo vim'
 alias ..='cd ..'
 alias ...='cd ...'
 alias ....='cd ....'
