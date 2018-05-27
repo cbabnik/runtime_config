@@ -11,6 +11,10 @@ hardstatus string " %H [%S] %= %C%a %Y-%M-%d"
 sorendition "=d bg"
 # disable screens annoying statup greeting
 startup_message off
+# If screen hangs it will detach automatically
+autodetach on
+# Turn off the hideous visual bell
+vbell on
 
 # key bindings
 #    switch layout

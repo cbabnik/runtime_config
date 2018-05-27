@@ -17,6 +17,10 @@ startup_message off
 sorendition "=d bg"
 # prevents screen content clobbering (sometimes)
 altscreen on
+# If screen hangs it will detach automatically
+autodetach on
+# Turn off the hideous visual bell
+vbell on
 
 # key bindings
 #    navigation
