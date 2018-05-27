@@ -1,11 +1,13 @@
 # /etc/gitconfig
 # system configuartion for git
 
+[blame]
+   showEmail = true
+   date = short
 [color]
    ui = auto
 [core]
    autocrlf = input
-   editor = vim
    excludesfile = ~/.gitignore
 [push]
    default = current
