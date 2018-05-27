@@ -14,6 +14,11 @@ export HISTTIMEFORMAT='%F %T '
 # run any other prompt command, then print command to an eternal history
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo $$ $USER \
                   "$(history 1)" >> ~/.bash_eternal_history'
+if [ ! -e ~/.bash_eternal_history ]
+then
+   touch ~/.bash_eternal_history
+   chmod 600 ~/.bash_eternal_history
+fi
 
 # combine cd and ls
 function cl() { cd $1; ls; }
