@@ -164,6 +164,15 @@ iabbrev accomodating accommodating
 
 " Setup Plugins :C::
 " Plugin configuration setup
+"    lightline
+if !empty(glob("~/.vim/bundle/lightline"))
+   set laststatus=2
+   let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
+      \ }
+endif
 "    NERDTree
 if !empty(glob("~/.vim/bundle/nerdtree"))
    let NERDTreeShowHidden=1
