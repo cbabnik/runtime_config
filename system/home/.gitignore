@@ -2,9 +2,9 @@
 
 # Temp files
 #___________
-*.swp
-*.swo
+*.sw[klmnop]
 *~
+*.bak
 
 # Compiled Source
 #________________
@@ -12,6 +12,11 @@
 *.so
 *.exe
 *.class
+*.pyc
+*.pyo
+*.dll
+*.dvi
+*.pdf
 
 # Packages
 #_________
@@ -19,6 +24,8 @@
 *.rar
 *.tar
 *.zip
+*.7z
+*.dmg
 
 # Log files & Debug info
 #_______________________

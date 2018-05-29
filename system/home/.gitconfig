@@ -5,14 +5,31 @@
 [user]
    name = Curtis Babnik
    email = curtisbabnik@gmail.com
-[color]
-   ui = true
-[pull]
-   rebase = true
 [credential]
    helper = store
+
+[color]
+   ui = true
+[clean]
+   requireForce = false
+
+[core]
+   editor = vim
+   compression = -1
+[diff]
+   tool = vimdiff
+[merge]
+   tool = vimdiff3
+
+[pull]
+   rebase = true
+[fetch]
+   recurseSubmodules = on-demand
+
 [alias]
    amend = commit -a --amend
    s = status -s
    lg = log --oneline --decorate --graph --all
    l = log --oneline --decorate
+[url "htpps://github.com/"]
+   insteadOf = gh:
