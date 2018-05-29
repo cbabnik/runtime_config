@@ -1,7 +1,8 @@
 " .vimrc
 
-" Setup Plugins :C::
 " The next couple lines must precede some code, so keep them at the top here
+set encoding=utf-8
+scriptencoding utf-8
 " Pathogen plugin helps manage other plugins
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
