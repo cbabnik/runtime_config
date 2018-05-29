@@ -5,6 +5,9 @@
 " :if filereadable( "/etc/vimrc" )
 "    source /etc/vimrc
 " :endif
+"
+set encoding=utf-8
+scriptencoding utf-8
 
 set nocompatible           " no vi compatibility
 filetype plugin indent on  " read in some essential runtime files

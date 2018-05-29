@@ -1,7 +1,8 @@
 " .vimrc
 
-" Setup Plugins :C::
 " The next couple lines must precede some code, so keep them at the top here
+set encoding=utf-8
+scriptencoding utf-8
 " Pathogen plugin helps manage other plugins
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
@@ -10,16 +11,6 @@ execute pathogen#infect()
 :if filereadable( "/etc/vimrc" )
    source /etc/vimrc
 :endif
-
-" Plugin configuration setup
-"    NERDTree
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.git$', '\.*.swp', '\.*.swo', '\.*.swn']
-"    vim colors solarized
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-colorscheme solarized
 
 " Misc settings :C::
 set nocompatible           " no vi compatibility
@@ -153,8 +144,6 @@ endfunction
 nnoremap <silent> <F5> :checktime<cr>:echo "refreshed"<cr>
 " F6 - toggle pastemode
 nnoremap <silent> <F6> :setlocal paste!<cr>:echo "paste mode:" &paste<cr>
-" F8 - toggle NERDTree
-nnoremap <silent> <F8> :NERDTreeToggle<cr>
 
 " Alias some common words/phrases :C::
 "    contact
@@ -172,3 +161,28 @@ iabbrev occurance occurence
 iabbrev accomodate accommodate
 iabbrev accomodation accommodation
 iabbrev accomodating accommodating
+
+" Setup Plugins :C::
+" Plugin configuration setup
+"    lightline
+if !empty(glob("~/.vim/bundle/lightline"))
+   set laststatus=2
+   let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
+      \ }
+endif
+"    NERDTree
+if !empty(glob("~/.vim/bundle/nerdtree"))
+   let NERDTreeShowHidden=1
+   let NERDTreeIgnore=['\.git$', '\.*.swp', '\.*.swo', '\.*.swn']
+   nnoremap <silent> <F8> :NERDTreeToggle<cr>
+endif
+"    vim colors solarized
+if !empty(glob("~/.vim/bundle/vim-colors-solarized"))
+   set background=dark
+   let g:solarized_termcolors=256
+   let g:solarized_termtrans=1
+   colorscheme solarized
+endif
