@@ -12,16 +12,6 @@ execute pathogen#infect()
    source /etc/vimrc
 :endif
 
-" Plugin configuration setup
-"    NERDTree
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.git$', '\.*.swp', '\.*.swo', '\.*.swn']
-"    vim colors solarized
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-colorscheme solarized
-
 " Misc settings :C::
 set nocompatible           " no vi compatibility
 filetype plugin indent on  " read in some essential runtime files
@@ -154,8 +144,6 @@ endfunction
 nnoremap <silent> <F5> :checktime<cr>:echo "refreshed"<cr>
 " F6 - toggle pastemode
 nnoremap <silent> <F6> :setlocal paste!<cr>:echo "paste mode:" &paste<cr>
-" F8 - toggle NERDTree
-nnoremap <silent> <F8> :NERDTreeToggle<cr>
 
 " Alias some common words/phrases :C::
 "    contact
@@ -173,3 +161,19 @@ iabbrev occurance occurence
 iabbrev accomodate accommodate
 iabbrev accomodation accommodation
 iabbrev accomodating accommodating
+
+" Setup Plugins :C::
+" Plugin configuration setup
+"    NERDTree
+if !empty(glob("~/.vim/bundle/nerdtree"))
+   let NERDTreeShowHidden=1
+   let NERDTreeIgnore=['\.git$', '\.*.swp', '\.*.swo', '\.*.swn']
+   nnoremap <silent> <F8> :NERDTreeToggle<cr>
+endif
+"    vim colors solarized
+if !empty(glob("~/.vim/bundle/vim-colors-solarized"))
+   set background=dark
+   let g:solarized_termcolors=256
+   let g:solarized_termtrans=1
+   colorscheme solarized
+endif
