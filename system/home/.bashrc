@@ -14,6 +14,11 @@ export HISTTIMEFORMAT='%F %T '
 # run any other prompt command, then print command to an eternal history
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo $$ $USER \
                   "$(history 1)" >> ~/.bash_eternal_history'
+if [ ! -e ~/.bash_eternal_history ]
+then
+   touch ~/.bash_eternal_history
+   chmod 600 ~/.bash_eternal_history
+fi
 
 # combine cd and ls
 function cl() { cd $1; ls; }
@@ -30,3 +35,14 @@ alias ..='cd ..'
 alias ...='cd ...'
 alias ....='cd ....'
 alias .....='cd .....'
+
+# If powerline-go is installed then use it!
+if [ -e ~/go/bin/powerline-go ]
+then
+   function _update_ps1() {
+      PS1="$(~/go/bin/powerline-go -error $?)"
+   }
+   if [ "$TERM" != "linux" ]; then
+      PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+   fi
+fi
